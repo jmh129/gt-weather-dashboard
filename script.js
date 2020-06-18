@@ -3,7 +3,7 @@ $(document).ready(function () {
   var currentTime = moment().format("dddd MMMM Do YYYY, h:mm:ss a");
 
   var searchHistory = [];
-  //   ON CLICK FUNCTION TO UPDATE PAGE
+  //   LOCAL STORAGE
   $("#search-button").on("click", function () {
     event.preventDefault();
     var currenCity = $("#new-search").val();
@@ -16,10 +16,12 @@ $(document).ready(function () {
       JSON.stringify(searchHistory)
     );
 
+    // ADD THE LIST ITEMS TO THE INPUT GROUPS
     $("#searchedCities").prepend(
       "<li class='list-group-item'>" + $("#new-search").val()
     );
 
+    // MAIN WEATHER QUERY
     var queryURL =
       "https://api.openweathermap.org/data/2.5/weather?q=" +
       currenCity +
@@ -95,6 +97,7 @@ $(document).ready(function () {
             "Humidity: " + humidity + "%"
           );
 
+          // IF STATEMENT FOR THE ICONS
           var weatherIcon = results[i].weather[0].main;
           if (weatherIcon === "Rain") {
             var icon = $("<img>").attr(
@@ -124,6 +127,7 @@ $(document).ready(function () {
             );
             icon.attr("style", "height: 40px; width: 40px");
           }
+        //   APPENDING THE ICONS TO THE FOLLOWING LOCATIONS 
           forecastBox.append(cardTitle);
           forecastBox.append(icon);
           forecastBox.append(cardTemp);
