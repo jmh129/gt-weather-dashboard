@@ -15,10 +15,10 @@ Clone this repo to your local machine using https://github.com/jmh129/gt-weather
 ### Usage
 The weather app can be accessed and used at the link below. To use, the user can load the page and enter a desired city they wish to see the weather conditions. Once the API's return the data, the user is presented with the current weather conditions as well as, a five day forecast for that particular area. 
 
-Link to website: https://jmh129.github.io/gt-workday-scheduler/
+Link to website: https://jmh129.github.io/gt-weather-dashboard/
 
 ### Schedule Page
-![Alt Text](https://github.com/jmh129/gt-workday-scheduler/blob/master/images/work-scheduler.png?raw=true)
+![Alt Text](https://github.com/jmh129/gt-weather-dashboard/blob/master/images/Homepage.png?raw=true)
 
 ### Credits
 Credit to the Georgia Institute of Technology Coding Bootcamp for the instruction for the assignemnt. 
