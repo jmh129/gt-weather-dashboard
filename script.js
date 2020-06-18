@@ -127,12 +127,13 @@ $(document).ready(function () {
             );
             icon.attr("style", "height: 40px; width: 40px");
           }
-        //   APPENDING THE ICONS TO THE FOLLOWING LOCATIONS 
+          //   APPENDING THE ICONS TO THE FOLLOWING LOCATIONS
           forecastBox.append(cardTitle);
           forecastBox.append(icon);
           forecastBox.append(cardTemp);
           forecastBox.append(cardHumidity);
           $("#forecast-row").append(forecastBox);
+        //   $("#forecast-title").text("5 Day forecast.")
         }
       });
     });
