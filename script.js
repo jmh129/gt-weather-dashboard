@@ -80,7 +80,7 @@ $(document).ready(function () {
       }).then(function (response) {
         for (var i = 0; i < 5; i++) {
           var results = response.list;
-          var date = 0;
+          var date = i;
           var temp = results[i].main.temp;
           var humidity = results[i].main.humidity;
           var forecastBox = $(
