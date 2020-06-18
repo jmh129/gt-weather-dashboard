@@ -55,7 +55,7 @@ $(document).ready(function () {
       //   SEPERATE QUERY NEEDS TO BE RUN TO GET UV INDEX
       //   NOTE: THE QUERY BELOW CONCATS THE VALUES OF LAT AND LON ABOVE TO PULL THE UV INDEX
       var queryUVURL =
-        "http://api.openweathermap.org/data/2.5/uvi?appid=b0aa3b9d4dd84a5bdf53dfbf2bbd9188" +
+        "https://api.openweathermap.org/data/2.5/uvi?appid=b0aa3b9d4dd84a5bdf53dfbf2bbd9188" +
         "&lat=" +
         cityUVLatitude +
         "&lon=" +
@@ -73,7 +73,7 @@ $(document).ready(function () {
       //   5 DAY FORECAST
       $("#forecast-row").empty();
       var queryForecastURL =
-        "http://api.openweathermap.org/data/2.5/forecast?q=" +
+        "https://api.openweathermap.org/data/2.5/forecast?q=" +
         currenCity +
         "&cnt=5&units=imperial&appid=b0aa3b9d4dd84a5bdf53dfbf2bbd9188";
       $.ajax({
@@ -102,19 +102,19 @@ $(document).ready(function () {
           if (weatherIcon === "Rain") {
             var icon = $("<img>").attr(
               "src",
-              "http://openweathermap.org/img/wn/09d@2x.png"
+              "https://openweathermap.org/img/wn/09d@2x.png"
             );
             icon.attr("style", "height: 40px; width: 40px");
           } else if (weatherIcon === "Clouds") {
             var icon = $("<img>").attr(
               "src",
-              "http://openweathermap.org/img/wn/04d@2x.png"
+              "https://openweathermap.org/img/wn/04d@2x.png"
             );
             icon.attr("style", "height: 40px; width: 40px");
           } else if (weatherIcon === "Clear") {
             var icon = $("<img>").attr(
               "src",
-              "http://openweathermap.org/img/wn/01d@2x.png"
+              "https://openweathermap.org/img/wn/01d@2x.png"
             );
             icon.attr("style", "height: 40px; width: 40px");
           } else if (weatherIcon === "Drizzle") {
@@ -123,7 +123,7 @@ $(document).ready(function () {
           } else if (weatherIcon === "Snow") {
             var icon = $("<img>").attr(
               "src",
-              "http://openweathermap.org/img/wn/13d@2x.png"
+              "https://openweathermap.org/img/wn/13d@2x.png"
             );
             icon.attr("style", "height: 40px; width: 40px");
           }
