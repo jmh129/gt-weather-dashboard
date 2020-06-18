@@ -2,13 +2,13 @@ $(document).ready(function () {
   // MOMENT JS FOR CURRENT TIME AND DATE
   var currentTime = moment().format("dddd MMMM Do YYYY, h:mm:ss a");
 
-  
+  var searchHistory = [];
   //   ON CLICK FUNCTION TO UPDATE PAGE
   $("#search-button").on("click", function () {
     event.preventDefault();
     var currenCity = $("#new-search").val();
 
-    var searchHistory =
+    searchHistory =
       JSON.parse(localStorage.getItem(searchHistory)) || [];
     searchHistory.push(currenCity);
     localStorage.setItem(
@@ -101,28 +101,28 @@ $(document).ready(function () {
               "src",
               "http://openweathermap.org/img/wn/09d@2x.png"
             );
-            icon.attr("style", "height: 55px; width: 55px");
+            icon.attr("style", "height: 40px; width: 40px");
           } else if (weatherIcon === "Clouds") {
             var icon = $("<img>").attr(
               "src",
               "http://openweathermap.org/img/wn/04d@2x.png"
             );
-            icon.attr("style", "height: 55px; width: 55px");
+            icon.attr("style", "height: 40px; width: 40px");
           } else if (weatherIcon === "Clear") {
             var icon = $("<img>").attr(
               "src",
               "http://openweathermap.org/img/wn/01d@2x.png"
             );
-            icon.attr("style", "height: 55px; width: 55px");
+            icon.attr("style", "height: 40px; width: 40px");
           } else if (weatherIcon === "Drizzle") {
             var icon = $("<img>").attr("src");
-            icon.attr("style", "height: 55px; width: 55px");
+            icon.attr("style", "height: 40px; width: 40px");
           } else if (weatherIcon === "Snow") {
             var icon = $("<img>").attr(
               "src",
               "http://openweathermap.org/img/wn/13d@2x.png"
             );
-            icon.attr("style", "height: 55px; width: 55px");
+            icon.attr("style", "height: 40px; width: 40px");
           }
           forecastBox.append(cardTitle);
           forecastBox.append(icon);
