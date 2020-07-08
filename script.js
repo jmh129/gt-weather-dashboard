@@ -83,12 +83,13 @@ $(document).ready(function () {
         for (var i = 0; i < 5; i++) {
           var results = response.list;
           var date = i;
+          var forecastDate = moment().add(date, "days").format("M/D/YYYY");
           var temp = results[i].main.temp;
           var humidity = results[i].main.humidity;
           var forecastBox = $(
             "<div class='card text-white bg-primary mx-auto mb-10 p-2' style='width: 8.5rem; height: 11rem;'>"
           );
-          var cardTitle = $("<h5 class = 'card-title'>").text(date);
+          var cardTitle = $("<h5 class = 'card-title'>").text(forecastDate);
           var cardTemp = $("<p class= 'card-text'>").text(
             "Temp: " + temp
           );
